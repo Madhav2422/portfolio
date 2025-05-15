@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madhav | Creative Developer Portfolio</title>
+    <link rel="icon" href="/images/Madhav.png" />
+    <script type="module" crossorigin src="/assets/index-B9zVQ9-B.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DLZYyrCS.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Dynamic Tab Title & Favicon Swap -->
+    <script>
+      const defaultTitle = "Madhav | Creative Developer Portfolio";
+      const defaultIcon = "/images/Madhav.png";
+      const hiddenTitle = "Come Back Soon!";
+      const hiddenIcon = "https://emojiapi.dev/api/v1/waving-hand/64.png"; // or any waving-hand image
+
+      const favicon = document.querySelector("link[rel~='icon']");
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          document.title = hiddenTitle;
+          if (favicon) favicon.href = hiddenIcon;
+        } else {
+          document.title = defaultTitle;
+          if (favicon) favicon.href = defaultIcon;
+        }
+      });
+    </script>
+  </body>
+</html>
